@@ -29,6 +29,11 @@ The above copyright notice and this permission notice shall be included in all c
           type="text/css"/>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/86ab86fa43.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+
     <!-- CSS Files -->
     <link href="assets/css/material-kit.css?v=2.0.7" rel="stylesheet"/>
     <link href="assets/css/style.css" rel="stylesheet">
@@ -97,7 +102,7 @@ The above copyright notice and this permission notice shall be included in all c
                 <a class="btn btn-info btn-raised btn-lg" href="#WhoAmI">
                     Know more about me !
                 </a>
-                <a class="btn btn-warning btn-raised btn-lg" download="CV-MarwanAhmed" href="assets/CV-MarwanAhmed.pdf">
+                <a class="btn btn-warning btn-raised btn-lg" download="CV-MarwanAhmed" href="assets/MarwanAhmed-CV.pdf">
                     download CV
                 </a>
             </div>
@@ -331,19 +336,19 @@ The above copyright notice and this permission notice shall be included in all c
                     <h2 class="text-center title">Hire Me</h2>
                     <h4 class="text-center description">Divide details about your product or agency work into parts.
                         Write a few lines about each one and contact me about any further collaboration. I will
-                        responde get back to you in a couple of hours.</h4>
+                        respond, get back to you in a couple of hours.</h4>
                     <form class="contact-form">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group has-info">
-                                    <label class="bmd-label-floating">Your Name</label>
-                                    <input class="form-control" type="email">
+                                    <label class="bmd-label-floating" for="name">Your Name</label>
+                                    <input class="form-control" type="text" id="name">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group has-info">
-                                    <label class="bmd-label-floating">Your Email</label>
-                                    <input class="form-control" type="email">
+                                    <label class="bmd-label-floating" for="email">Your Email</label>
+                                    <input class="form-control" type="email" id="email">
                                 </div>
                             </div>
                         </div>
@@ -353,7 +358,7 @@ The above copyright notice and this permission notice shall be included in all c
                         </div>
                         <div class="row">
                             <div class="col-md-4 ml-auto mr-auto text-center">
-                                <button class="btn btn-info btn-raised">
+                                <button class="btn btn-info btn-raised" type="button" id="sendButton">
                                     Send Message
                                 </button>
                             </div>
@@ -388,6 +393,7 @@ The above copyright notice and this permission notice shall be included in all c
 <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
 <script src="assets/js/material-kit.js?v=2.0.7" type="text/javascript"></script>
 <script src="assets/js/typewriter.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
 
 </html>
