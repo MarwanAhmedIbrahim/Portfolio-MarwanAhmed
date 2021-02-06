@@ -22,6 +22,7 @@ const name = document.querySelector("#name");
 const email = document.querySelector("#email");
 const message = document.querySelector("#exampleMessage");
 const sendButton = document.querySelector("#sendButton");
+const messageForm = document.querySelector("#messageForm");
 
 sendButton.addEventListener("click", function (){
     const nameToSave = name.value;
@@ -33,6 +34,8 @@ sendButton.addEventListener("click", function (){
         message: messageToSave
     }).then(function (){
         console.log("Message saved!");
+    }).then(function (){
+        messageForm.reset();
     }).catch(function (error){
         console.log("Got an error: ", error);
     });
